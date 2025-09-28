@@ -1,0 +1,22 @@
+{
+  "solana_queries": {
+    "recent_addresses": {
+      "id": 3237025,
+      "name": "CEX EVMS Address Analysis",
+      "description": "The purpose of retrieving all data from the cex_evms.addresses table is to analyze and understand the distribution, activity, and characteristics of addresses interacting with centralized exchanges (CEX) on Ethereum Virtual Machine (EVM) compatible networks.",
+      "category": "transactions",
+      "cost_credits": 10,
+      "parameters": [],
+      "example_sql": "SELECT * FROM cex_evms.addresses"
+    },
+    "solana_blocks": {
+      "id": 3378085,
+      "name": "CEX EVMS Address Analysis (Alternative)",
+      "description": "Alternative query for CEX EVMS addresses with different parameters",
+      "category": "blocks",
+      "cost_credits": 5,
+      "parameters": [],
+      "example_sql": "SELECT issuer, address, ticker AS etf_ticker, track_inflow, track_outflow, inverse_values FROM dune.hildobby.dataset_bitcoin_etf_addresses INNER JOIN dune.hildobby.dataset_bitcoin_etf_metadata USING (issuer)"
+    }
+  }
+}
